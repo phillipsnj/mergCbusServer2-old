@@ -2,9 +2,13 @@ var net = require('net');
 var serialport = require("serialport");
 var SerialPort = serialport.SerialPort;
 
-var USB_PORT = 'COM3';
-var NET_PORT = 5550;
-var NET_ADDRESS = '127.0.0.1';
+var fs = require("fs");
+var contents = fs.readFileSync("config.json");
+var config = JSON.parse(contents);
+
+var USB_PORT = config.usb4.port;
+var NET_PORT = config.server.port;
+var NET_ADDRESS = config.server.address;
 
 var clients = [];
 
