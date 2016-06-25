@@ -1,0 +1,12 @@
+{
+  "name": "cbusServer",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Nigel Phillips",
+  "scripts": {
+    "start": "node cbusServer"
+  },
+  "dependencies": {
+    "serialport": "^3.1.2"
+  }
+}
