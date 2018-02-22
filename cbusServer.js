@@ -1,24 +1,30 @@
-var net = require('net');
-var serialport = require("serialport");
-var SerialPort = serialport.SerialPort;
+'use strict';
 
-var fs = require("fs");
-var contents = fs.readFileSync("config.json");
-var config = JSON.parse(contents);
+const net = require('net');
+const jsonfile = require('jsonfile')
+const serialport = require('serialport');
+const parsers = serialport.parsers;
 
-var USB_PORT = config.usb4.port;
-var NET_PORT = config.server.port;
-var NET_ADDRESS = config.server.address;
+const config = jsonfile.readFileSync('./config.json')
+
+const USB_PORT = config.usb4.port;
+const NET_PORT = config.server.port;
+const NET_ADDRESS = config.server.address;
 
 var clients = [];
 
-var serialPort = new SerialPort(USB_PORT, {
-    baudrate: 115200,
+const parser = new parsers.Readline({
+    delimiter: ';'
+})
+
+const serialPort = new serialport(USB_PORT, {
+    baudRate: 115200,
     dataBits: 8,
     parity: 'none',
-    stopBits: 1,
-    parser: serialport.parsers.readline(";")
+    stopBits: 1
 });
+
+serialPort.pipe(parser);
 
 var client = new net.Socket();
 
@@ -33,10 +39,15 @@ client.on('data', function (data) {
 
 serialPort.on("open", function () {
     console.log('Serial Port '+USB_PORT+' Open');
-    serialPort.on('data', function (data) {
-        console.log('USB Sent' + data.toString() + ";");
-        client.write(data.toString() + ";");
-    });
+});
+
+parser.on('data', function(data) {
+    console.log('USB Received (Parsed)' + data.toString() + ";")
+    client.write(data.toString() + ";")
+})
+
+serialPort.on("error", function(err){
+    console.log('Serial port error: ' + err.message);
 });
 
 var server = net.createServer(function (socket) {
