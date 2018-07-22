@@ -5,5 +5,8 @@
   "server": {
     "port": 5550,
     "address": "localhost"
+  },
+  "console": {
+	"decimaleventparse":"1"
   }
 }
