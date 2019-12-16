@@ -1,12 +1,10 @@
-var serialport = require('serialport');
-var SerialPort = serialport.SerialPort;
- 
+const serialport = require('serialport');
+
 // list serial ports:
-serialport.list(function (err, ports) {
+serialport.list().then(ports => {
   ports.forEach(function(port) {
-    console.log("Com Name: " + port.comName);
-    console.log("pnp ID: " + port.pnpId);
-    console.log("Manufa: " + port.manufacturer);
-    console.log("_____________________________________________________");
+    console.log(port.path);
+    console.log(port.pnpId);
+    console.log(port.manufacturer);
   });
 });
