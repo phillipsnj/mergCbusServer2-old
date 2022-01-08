@@ -1,0 +1,426 @@
+{
+  "opcodes": {
+    "0D": {
+      "mnemonic": "QNN",
+      "description": "Accessory ON event (long)",
+      "fields": [
+        {
+          "id": 1,
+          "name": "opcode",
+          "start": 7,
+          "length": 2,
+          "type": "char"
+        }
+      ]
+    },
+    "57": {
+      "mnemonic": "NERD",
+      "description": "Read back all stored events in a node",
+      "fields": [
+        {
+          "id": 1,
+          "name": "opcode",
+          "start": 7,
+          "length": 2,
+          "type": "char"
+        },
+        {
+          "id": 2,
+          "name": "nodeId",
+          "start": 9,
+          "length": 4,
+          "type": "num"
+        }]
+    },
+    "58": {
+      "mnemonic": "RQEVN",
+      "description": "Request to read number of stored events",
+      "fields": [
+        {
+          "id": 1,
+          "name": "opcode",
+          "start": 7,
+          "length": 2,
+          "type": "char"
+        },
+        {
+          "id": 2,
+          "name": "nodeId",
+          "start": 9,
+          "length": 4,
+          "type": "num"
+        }]
+    },
+    "6F": {
+      "mnemonic": "CMDERR",
+      "description": "Error messages from nodes during configuration",
+      "fields": [
+        {
+          "id": 1,
+          "name": "opcode",
+          "start": 7,
+          "length": 2,
+          "type": "char"
+        },
+        {
+          "id": 2,
+          "name": "nodeId",
+          "start": 9,
+          "length": 4,
+          "type": "num"
+        },
+        {
+          "id": 3,
+          "name": "error",
+          "start": 13,
+          "length": 2,
+          "type": "num"
+        }]
+    },
+    "71": {
+      "mnemonic": "NVRD",
+      "description": "Request read of a node variable",
+      "fields": [
+        {
+          "id": 1,
+          "name": "opcode",
+          "start": 7,
+          "length": 2,
+          "type": "char"
+        },
+        {
+          "id": 2,
+          "name": "nodeId",
+          "start": 9,
+          "length": 4,
+          "type": "num"
+        },
+        {
+          "id": 3,
+          "name": "variable",
+          "start": 13,
+          "length": 2,
+          "type": "num"
+        }]
+    },
+    "73": {
+      "mnemonic": "RQNPN",
+      "description": "Request read of a node parameter by index",
+      "fields": [
+        {
+          "id": 1,
+          "name": "opcode",
+          "start": 7,
+          "length": 2,
+          "type": "char"
+        },
+        {
+          "id": 2,
+          "name": "nodeId",
+          "start": 9,
+          "length": 4,
+          "type": "num"
+        },
+        {
+          "id": 3,
+          "name": "parameter",
+          "start": 13,
+          "length": 2,
+          "type": "num"
+        }]
+    },
+    "74": {
+      "mnemonic": "NUMEV",
+      "description": " Number of events stored in node",
+      "fields": [
+        {
+          "id": 1,
+          "name": "opcode",
+          "start": 7,
+          "length": 2,
+          "type": "char"
+        },
+        {
+          "id": 2,
+          "name": "nodeId",
+          "start": 9,
+          "length": 4,
+          "type": "num"
+        },
+        {
+          "id": 3,
+          "name": "events",
+          "start": 13,
+          "length": 2,
+          "type": "num"
+        }]
+    },
+    "90": {
+      "mnemonic": "ACON",
+      "description": "Accessory ON event (long)",
+      "fields": [
+        {
+          "id": 1,
+          "name": "opcode",
+          "start": 7,
+          "length": 2,
+          "type": "char"
+        },
+        {
+          "id": 2,
+          "name": "nodeId",
+          "start": 9,
+          "length": 4,
+          "type": "num"
+        },
+        {
+          "id": 3,
+          "name": "eventId",
+          "start": 13,
+          "length": 4,
+          "type": "num"
+        }
+      ]
+    },
+    "91": {
+      "mnemonic": "ACOF",
+      "description": "Accessory OFF event (long)",
+      "fields": [
+        {
+          "id": 1,
+          "name": "opcode",
+          "start": 7,
+          "length": 2,
+          "type": "char"
+        },
+        {
+          "id": 2,
+          "name": "nodeId",
+          "start": 9,
+          "length": 4,
+          "type": "num"
+        },
+        {
+          "id": 3,
+          "name": "eventId",
+          "start": 13,
+          "length": 4,
+          "type": "num"
+        }
+      ]
+    },
+    "97": {
+      "mnemonic": "NVANS",
+      "description": "Response to a request for a node variable value",
+      "fields": [
+        {
+          "id": 1,
+          "name": "opcode",
+          "start": 7,
+          "length": 2,
+          "type": "char"
+        },
+        {
+          "id": 2,
+          "name": "nodeId",
+          "start": 9,
+          "length": 4,
+          "type": "num"
+        },
+        {
+          "id": 3,
+          "name": "variable",
+          "start": 13,
+          "length": 2,
+          "type": "num"
+        },
+        {
+          "id": 4,
+          "name": "value",
+          "start": 15,
+          "length": 2,
+          "type": "num"
+        }]
+    },
+    "9B": {
+      "mnemonic": "PARAN",
+      "description": "Response to request for individual node parameter",
+      "fields": [
+        {
+          "id": 1,
+          "name": "opcode",
+          "start": 7,
+          "length": 2,
+          "type": "char"
+        },
+        {
+          "id": 2,
+          "name": "nodeId",
+          "start": 9,
+          "length": 4,
+          "type": "num"
+        },
+        {
+          "id": 3,
+          "name": "parameter",
+          "start": 13,
+          "length": 2,
+          "type": "num"
+        },
+        {
+          "id": 4,
+          "name": "value",
+          "start": 15,
+          "length": 2,
+          "type": "num"
+        }]
+    },
+    "9C": {
+      "mnemonic": "REVAL",
+      "description": "Request for read of an event variable",
+      "fields": [
+        {
+          "id": 1,
+          "name": "opcode",
+          "start": 7,
+          "length": 2,
+          "type": "char"
+        },
+        {
+          "id": 2,
+          "name": "nodeId",
+          "start": 9,
+          "length": 4,
+          "type": "num"
+        },
+        {
+          "id": 3,
+          "name": "eventId",
+          "start": 13,
+          "length": 2,
+          "type": "num"
+        },
+        {
+          "id": 4,
+          "name": "variable",
+          "start": 15,
+          "length": 2,
+          "type": "num"
+        }]
+    },
+    "B5": {
+      "mnemonic": "NEVAL",
+      "description": "Response to request for read of EV value",
+      "fields": [
+        {
+          "id": 1,
+          "name": "opcode",
+          "start": 7,
+          "length": 2,
+          "type": "char"
+        },
+        {
+          "id": 2,
+          "name": "nodeId",
+          "start": 9,
+          "length": 4,
+          "type": "num"
+        },
+        {
+          "id": 3,
+          "name": "eventId",
+          "start": 13,
+          "length": 2,
+          "type": "num"
+        },
+        {
+          "id": 4,
+          "name": "variable",
+          "start": 15,
+          "length": 2,
+          "type": "num"
+        },
+        {
+          "id": 5,
+          "name": "value",
+          "start": 17,
+          "length": 2,
+          "type": "num"
+        }]
+    },
+    "B6": {
+      "mnemonic": "PNN",
+      "description": "Response to Query Node",
+      "fields": [
+        {
+          "id": 1,
+          "name": "opcode",
+          "start": 7,
+          "length": 2,
+          "type": "char"
+        },
+        {
+          "id": 2,
+          "name": "nodeId",
+          "start": 9,
+          "length": 4,
+          "type": "num"
+        },
+        {
+          "id": 3,
+          "name": "manufId",
+          "start": 13,
+          "length": 2,
+          "type": "num"
+        },
+        {
+          "id": 4,
+          "name": "moduleId",
+          "start": 15,
+          "length": 2,
+          "type": "num"
+        },
+        {
+          "id": 5,
+          "name": "flags",
+          "start": 17,
+          "length": 2,
+          "type": "num"
+        }
+      ]
+    },
+    "F2": {
+      "mnemonic": "ENRSP",
+      "description": "Response to request to read node events",
+      "fields": [
+        {
+          "id": 1,
+          "name": "opcode",
+          "start": 7,
+          "length": 2,
+          "type": "char"
+        },
+        {
+          "id": 2,
+          "name": "nodeId",
+          "start": 9,
+          "length": 4,
+          "type": "num"
+        },
+        {
+          "id": 3,
+          "name": "event",
+          "start": 13,
+          "length": 8,
+          "type": "char"
+        },
+        {
+          "id": 4,
+          "name": "eventId",
+          "start": 21,
+          "length": 2,
+          "type": "num"
+        }]
+    }
+  }
+}

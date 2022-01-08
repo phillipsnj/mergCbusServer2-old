@@ -1,0 +1,165 @@
+{
+  "modules": {
+    "1": {
+      "name": "CANACC4",
+      "component": "mergDefault"
+    },
+    "2": {
+      "name": "CANACC5",
+      "component": "merg-canacc5"
+    },
+    "3": {
+      "name": "CANACC8",
+      "component": "merg-canacc8"
+    },
+    "4": {
+      "name": "CANACE3",
+      "component": "mergDefault"
+    },
+    "A505": {
+      "name": "CANACE8C",
+      "component": "merg-canace8c"
+    },
+    "7": {
+      "name": "CANLED64",
+      "component": "mergDefault"
+    },
+    "8": {
+      "name": "CANACC4_2",
+      "component": "mergDefault"
+    },
+    "A509": {
+      "name": "CANCAB",
+      "component": "mergDefault"
+    },
+    "A510": {
+      "name": "CANCMD",
+      "component": "merg-cancmd"
+    },
+    "A513": {
+      "name": "CANSERVO8C",
+      "component": "merg-canservo8c"
+    },
+    "29": {
+      "name": "CANPAN",
+      "component": "merg-canpan"
+    },
+    "25": {
+      "name": "CANETHER",
+      "component": "mergDefault"
+    },
+    "A520": {
+      "name": "CANMIO",
+      "component": "merg-canmio"
+    },
+    "A532": {
+      "name": "CANMIO-SVO",
+      "component": "merg-canservo8c"
+    },
+    "A534": {
+      "name": "CANMIO-OUT",
+      "component": "merg-canacc8"
+    },
+    "53": {
+      "name": "CANMIO-BIP",
+      "component": "mergDefault"
+    },
+    "59": {
+      "name": "CANDISP",
+      "component": "mergDefault"
+    },
+    "62": {
+      "name": "CANINP",
+      "component": "merg-canace8c"
+    },
+    "63": {
+      "name": "CANOUT",
+      "component": "merg-canacc8"
+    },
+    "65": {
+      "name": "ETHNIGE",
+      "component": "mergETHNIGE"
+    },
+    "99": {
+      "name": "LIGHTS",
+      "component": "daveh-lights"
+    }
+  },
+  "cbusErrors": {
+    "1": "Command Not Supported",
+    "2": "Not in Learn Mode",
+    "3": "Not in Setup Mode",
+    "4": "Too Many Events",
+    "5": "No Event",
+    "6": "Invalid Event variable index",
+    "7": "Invalid Event",
+    "8": "Reserved",
+    "9": "Invalid Parameter Index",
+    "10": "Invalid Node Variable Index",
+    "11": "Invalid Event Variable Value",
+    "12": "Invalid Node Variable Value"
+  },
+  "dccErrors": {
+    "1": "Loco Stack Full",
+    "2": "Loco Address Taken",
+    "3": "Session not present",
+    "4": "Consist Empty",
+    "5": "Loco Not Found",
+    "6": "Can Bus Error",
+    "7": "Invalid Request",
+    "8": "Session Cancelled"
+  },
+
+  "cpuName": {
+      "1": "P18F2480",
+      "2": "P18F4480",
+      "3": "P18F2580",
+      "4": "P18F4580",
+      "5": "P18F2585",
+      "6": "P18F4585",
+      "7": "P18F2680",
+      "8": "P18F4680",
+      "9": "P18F2682",
+      "10": "P18F4682",
+      "11": "P18F2685",
+      "12": "P18F4685",
+      "13": "P18F25K80",
+      "14": "P18F45K80",
+      "15": "P18F26K80",
+      "16": "P18F46K80",
+      "17": "P18F65K80",
+      "18": "P18F66K80",
+      "30": "P32MX534F064",
+      "31": "P32MX564F064",
+      "32": "P32MX564F128",
+      "33": "P32MX575F256",
+      "34": "P32MX575F512",
+      "35": "P32MX764F128",
+      "36": "P32MX775F256",
+      "37": "P32MX775F512",
+      "38": "P32MX795F512",
+      "255": "unknown"
+  },
+  
+  "cpuManufacturerName": {
+			"1": "MICROCHIP",
+			"2": "ATMEL",
+			"3": "ARM",
+            "255": "unknown"
+  },
+
+  "moduleManufacturerName": {
+			"70": "ROCRAIL",
+			"80": "SPECTRUM",
+			"165": "MERG",
+            "255": "unknown"
+  },
+
+  "interfaceName": {
+			"1": "CAN",
+			"2": "Ethernet",
+			"3": "Microchip mesh network",
+            "255": "unknown"
+  }
+
+}
